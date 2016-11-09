@@ -12,5 +12,5 @@ version='0.6.3',
     py_modules=['zenoss',],
     keywords = ['zenoss', 'api', 'json', 'rest'],
     test_suite='tests',
-    data_files = [('', ['LICENSE.txt']),('', ['README.md']),('examples', ['list_devices.py']),]
+    data_files = [('', ['LICENSE.txt']),('', ['README.md']),('examples', '', ['list_devices.py']),]
 )
