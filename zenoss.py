@@ -89,6 +89,14 @@ class Zenoss(object):
         return self.__router_request('DeviceRouter', 'getDevices',
                                      data=[{'uid': device_class, 'params': {}, 'limit': limit}])
 
+    def get_templates_by_uid(self, uid):
+        '''Get templates on a device by uid
+           http://monitoringartist.github.io/community.zenoss.org/community/documentation/official_documentation/api.html
+        '''
+        log.info('Get templates on a device')
+        return self.__router_request('TemplateRouter', 'getObjTemplates',
+                                     data=[{'uid': uid}])
+
     def get_components(self, device_name, **kwargs):
         '''Get components for a device given the name
         '''
